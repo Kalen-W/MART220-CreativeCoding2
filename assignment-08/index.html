@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Kalen Weinheimer">
+  <meta name="description" content="This is an attempt at creating a simple raycasting engine / game that draws directly onto a canvas.">
+  <meta name="keywords" contents="raycast, raycasting, raycaster, engine, game, javascript, canvas">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon-32x32.png">
+  <title>RayCasting Engine Prototype</title>
+
+  <style>
+    @font-face {font-family:'VT323'; src:url(./assets/fonts/VT323-Regular.ttf);}
+    html {background:#222; box-sizing:border-box;}
+    *, *:before, *:after {box-sizing:inherit;}
+    body {margin:0; overflow:hidden;}
+    #mapEditor-container {width:1920px; height:1080px; padding:0; overflow:hidden; display:none;}
+    #mapEditor-frame {z-index:9999; position:absolute; width:1920px; height:1080px; border:0;}
+  </style>
+
+  <link rel="preload" href="./assets/fonts/VT323-Regular.ttf" as="font" type="font/ttf">
+  <link rel="preload" href="./assets/textures/walls.png" as="image" type="image/png">
+
+
+  <link rel="preload" href="./assets/textures/environmentSprites/tablechairs.png" as="image" type="image/png">
+  <link rel="preload" href="./assets/textures/environmentSprites/armor.png" as="image" type="image/png">
+  <link rel="preload" href="./assets/textures/environmentSprites/plantgreen.png" as="image" type="image/png">
+  <link rel="preload" href="./assets/textures/environmentSprites/lamp.png" as="image" type="image/png">
+
+  <link rel="preload" href="./assets/textures/enemySprites/guard.png" as="image" type="image/png">
+  <link rel="preload" href="./assets/textures/weaponSprites/wolfensteinWeapon-Pistol.png" as="image" type="image/png">
+</head>
+<body>
+  <div id="mapEditor-container">
+    <!--<iframe src="./mapEditor/mapEditor.html" id="mapEditor-frame"></iframe>-->
+  </div>
+
+
+  <script src="./sourceCode/basicVariablesAndFunctions.js"></script>
+  <script src="./sourceCode/imageDeclarations.js"></script>
+  <script src="./sourceCode/maps.js"></script>
+
+  <script src="./sourceCode/particleSystem.js"></script>
+  <script src="./sourceCode/aiAttempt.js"></script>
+  <script src="./sourceCode/playerCollisionAndControls.js"></script>
+
+  <script src="./sourceCode/menusAndUi.js"></script>
+  <script src="./sourceCode/miscCode.js"></script>
+  <script src="./sourceCode/renderFunctions.js"></script>
+  <script src="./sourceCode/rayCastingAndGameLoops.js"></script>
+</body>
+</html>
